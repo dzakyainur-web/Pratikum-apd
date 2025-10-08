@@ -1,0 +1,83 @@
+print("=== Program darah denis ===")
+
+while True:
+    username = input("Masukkan username: ").lower()
+    while username == "":
+        username = input("Masukkan username nya bang!!!: ").lower()
+    password = input("Masukkan password: ")
+    while password == "":
+        password = input("Masukkan password nya bang!!!: ")
+
+    if username == "jaki" and password == "061":
+        print("Login")
+        break
+    elif username != "jaki":
+        print("username salah")
+    elif password != "061":
+        print("password salah")
+    else:
+        print("Gagal login")
+
+AP = 0
+AN = 0
+BP = 0
+BN = 0
+ABP = 0
+ABN = 0
+OP = 0
+ON = 0
+
+while True:
+    G = input("Masukkan golongan darah (A/B/AB/O) : ").upper().strip()
+    if G not in ["A", "B", "AB", "O"]:
+        print("golongan darah tidak ada")
+        continue
+    R = input("Masukkan Rhesus (+/-) : ")
+    if R not in ["+", "-"]:
+        print("Rhesus tidak termasuk")
+        continue
+    J = int(input("Masukkan jumlah kantong darah: "))
+    if J == "0":
+        print ("harus lebih dari 0.")
+        continue
+    J = int(J)
+    ml = J * 500
+
+    if G == "A":
+        if R == "+":
+            AP += ml
+        else:
+            AN += ml
+    elif G == "B":
+        if R == "+":
+            BP += ml
+        else:
+            BN += ml
+    elif G == "AB":
+        if R == "+":
+            ABP += ml
+        else:
+            ABN += ml
+    elif G == "O":
+        if R == "+":
+            OP += ml
+        else:
+            ON += ml
+
+    ulang = input("\nApakah Anda masih mau input lagi? (Y/T): ").lower()
+    if ulang != "y":
+        break
+
+print("RINGKASAN STOK DARAH DENIS")
+print(f"A+  : {AP} ml")
+print(f"A-  : {AN} ml")
+print(f"B+  : {BP} ml")
+print(f"B-  : {BN} ml")
+print(f"AB+ : {ABP} ml")
+print(f"AB- : {ABN} ml")
+print(f"O+  : {OP} ml")
+print(f"O-  : {ON} ml")
+
+Tdarah = AP + AN + BP + BN + ABP + ABN + OP + ON
+
+print(f"Total darah keseluruhan: {Tdarah} ml")
