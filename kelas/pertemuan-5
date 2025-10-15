@@ -1,0 +1,87 @@
+
+# list_Random = [61, 'nama', 'NIM',['indonesia','laos']]
+# # print(list_mahasiswa)
+# # print(list_mahasiswa[-1][1])
+
+# list_Random.append("bang Ahnaf")
+# print(list_Random)
+# list_Random.insert(2, 'samarinda', 'balikpapan')
+# print(list_Random)
+
+# list awal
+# studyclub = ["Data Science", "Robotics",['indonsia', 'malam', 'jerman'], "Multimedia", "Network"]
+# print('awal mula' ,studyclub)
+# studyclub[0] = 'AI dan Publikasi ilmiah'
+# print('awal selanjutnya', studyclub)
+# studyclub[2][2] = "rusia"
+# print('mengubah jerman menjadi rusia', studyclub)
+# print('')
+
+# studyclub.pop(1)
+# print(studyclub)
+
+# hilang = studyclub.pop(1)
+# studyclub.pop(1)
+# print(studyclub)
+# print(hilang)
+
+# del studyclub[0]
+# print(studyclub)
+
+# matakuliah = ['PIT','APD', 'APD', 'KALKULUS', 'ORSIKOM']
+# print('awal' , matakuliah)
+
+# matakuliah.remove('APD')
+# print('akhir', matakuliah)
+# print(dir(matakuliah))
+
+# pratikum = ["mahasiswa", 20, True, 45.10, ["APD",25]]
+# print(pratikum[0:1000:3])
+
+# for item in pratikum[0:4:3]:
+#     print(item, end=", ")
+#     print(dir(pratikum))
+
+#     print(len(pratikum))
+
+# for i in range(len(pratikum)):
+#     print(i+1, pratikum[i])
+
+# maha=[1,2,3,4,"jaki"]
+# hasil=maha*3
+# print(hasil, end=", ")
+
+# for i in maha:
+#     print(i*3)
+
+# kelas = [
+#     ["ridho", "lian", "ainur"], ["juki", "attar", "udin"],
+#     ["yanto", "bagus", "kiki"]
+# ]
+# print(kelas[1][2])
+
+# anggota = ("riyadi", 20, True, 3.96, ["APD",25],("samarinda",12))
+# print(anggota)
+
+# for i in anggota:
+#     print(i)
+
+# langgota=list(anggota)
+# print(langgota)
+
+# langgota.remove("riyadi")
+# print(langgota)
+
+# anggota=tuple(langgota)
+# print(anggota)
+
+#-untuk mengubah tuple ubah ke list disimpan disatu variabel baru
+#-lakukan operasi list
+#-balikin lagi ke tuple dengan variabel awal
+
+tugas = ('rangkuman','arduino','scrapping','menulis')
+#beri variabel setiap values
+(*PTI, orsikom, basisdata)=tugas
+print(*PTI)
+print(orsikom)
+print(basisdata)
